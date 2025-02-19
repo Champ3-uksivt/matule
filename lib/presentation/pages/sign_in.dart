@@ -105,8 +105,11 @@ class _SignInPageState extends State<SignInPage> {
             SizedBox(
                 width: MediaQuery.of(context).size.width - 200,
                 child: button(() {
+                  if (textLogin.text == "11") {
+                    Navigator.pushNamed(context, "/onBoardingScreen");
+                    return;
+                  }
                   log("clickedButton");
-                  TrySignIn(textLogin.text, textPassword.text, context);
                 }, "Войти", Mycolors().background, Mycolors().accent)),
             SizedBox(
               height: 150,

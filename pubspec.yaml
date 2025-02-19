@@ -18,7 +18,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
-
+flutter_native_splash:
+  title: Matule
+  ios: "assets/images/Matule_icon.png"
+  
 
 environment:
   sdk: ^3.6.1
@@ -101,7 +104,7 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fonts/roboto/Roboto-Black.ttf
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
           style: normal
 
   #
