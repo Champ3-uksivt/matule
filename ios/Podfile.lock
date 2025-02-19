@@ -8,6 +8,8 @@ PODS:
   - flutter_bcrypt (0.0.1):
     - BCryptSwift (~> 1.1)
     - Flutter
+  - flutter_email_sender (0.0.1):
+    - Flutter
   - flutter_native_splash (2.4.3):
     - Flutter
   - geolocator_apple (1.2.0):
@@ -33,6 +35,7 @@ DEPENDENCIES:
   - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
   - Flutter (from `Flutter`)
   - flutter_bcrypt (from `.symlinks/plugins/flutter_bcrypt/ios`)
+  - flutter_email_sender (from `.symlinks/plugins/flutter_email_sender/ios`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
   - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
@@ -55,6 +58,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_bcrypt:
     :path: ".symlinks/plugins/flutter_bcrypt/ios"
+  flutter_email_sender:
+    :path: ".symlinks/plugins/flutter_email_sender/ios"
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
   geolocator_apple:
@@ -78,6 +83,7 @@ SPEC CHECKSUMS:
   device_info_plus: 21fcca2080fbcd348be798aa36c3e5ed849eefbe
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_bcrypt: 064335518dcbdcdb1f93e1ffe8511fa51671ec10
+  flutter_email_sender: aa1e9772696691d02cd91fea829856c11efb8e58
   flutter_native_splash: 6cad9122ea0fad137d23137dd14b937f3e90b145
   geolocator_apple: 1560c3c875af2a412242c7a923e15d0d401966ff
   image_picker_ios: 7fe1ff8e34c1790d6fff70a32484959f563a928a

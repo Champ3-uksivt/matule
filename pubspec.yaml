@@ -86,7 +86,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images
+    - assets/images/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
@@ -101,7 +101,7 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: asseets/fonts/roboto/Roboto-Black.ttf
+        - asset: assets/fonts/roboto/Roboto-Black.ttf
           style: normal
 
   #
