@@ -65,6 +65,28 @@ class _HomePageState extends State<HomePage> {
                 )
               ],
             ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Категории",
+                  style: myTextStyle(TextDecoration.none, Mycolors().text, 20),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      "Все",
+                      style: TextStyle(
+                        fontFamily: "Roboto",
+                        fontSize: 20,
+                        color: Color(0xFF48B2E7),
+                      ),
+                    ))
+              ],
+            )
           ],
         ),
       ),
