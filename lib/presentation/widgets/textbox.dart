@@ -25,7 +25,6 @@ TextFormField textBox(
           : IconButton(
               onPressed: () {
                 isRevealed = !isRevealed;
-                textEditingController.dispose();
               },
               icon: SvgPicture.asset("assets/images/Revealed.svg")),
     ),

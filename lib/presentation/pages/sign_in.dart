@@ -2,9 +2,11 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
+import 'package:flutter_application_1/domain/func.dart';
 import 'package:flutter_application_1/presentation/widgets/button.dart';
 import 'package:flutter_application_1/presentation/widgets/textbox.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -13,6 +15,7 @@ class SignInPage extends StatefulWidget {
   State<SignInPage> createState() => _SignInPageState();
 }
 
+final supa = Supabase.instance;
 TextEditingController textLogin = TextEditingController();
 TextEditingController textPassword = TextEditingController();
 
@@ -103,6 +106,7 @@ class _SignInPageState extends State<SignInPage> {
                 width: MediaQuery.of(context).size.width - 200,
                 child: button(() {
                   log("clickedButton");
+                  TrySignIn(textLogin.text, textPassword.text, context);
                 }, "Войти", Mycolors().background, Mycolors().accent)),
             SizedBox(
               height: 150,
