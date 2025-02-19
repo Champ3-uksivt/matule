@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentation/pages/sign_in.dart';
 
 void main() {
-  runApp(const MyApp1());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,9 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      
-    );
+    return MaterialApp(title: "Matule", theme: ThemeData(), routes: {
+      "/": (context) => const SignInPage(),
+    });
   }
 }
 
@@ -35,7 +36,7 @@ class MyApp1 extends StatelessWidget {
         //
         // Notice that the counter didn't reset back to zero; the application
         // state is not lost during the reload. To reset the state, use hot
-        // restart instead. 
+        // restart instead.
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
