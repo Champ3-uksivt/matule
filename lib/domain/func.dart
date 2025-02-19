@@ -33,6 +33,7 @@ void TrySignIn(String email, String password, BuildContext context) {
   try {
     supa.client.auth.signInWithPassword(password: password, email: email);
     Navigator.pushNamed(context, "/mainPage");
+    log("message");
   } catch (e) {
     log(e.toString());
   }

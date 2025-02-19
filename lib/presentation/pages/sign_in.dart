@@ -23,11 +23,9 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Mycolors().background,
-      ),
+      backgroundColor: Mycolors().background,
       body: SingleChildScrollView(
-        padding: EdgeInsets.fromLTRB(30, 0, 30, 10),
+        padding: EdgeInsets.fromLTRB(30, 80, 30, 10),
         child: Column(
           children: [
             Container(
@@ -44,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ),
             Container(
-              height: 30,
+              height: 40,
             ),
             Container(
               alignment: Alignment.center,
@@ -109,7 +107,8 @@ class _SignInPageState extends State<SignInPage> {
                     Navigator.pushNamed(context, "/onBoardingScreen");
                     return;
                   }
-                  log("clickedButton");
+                  TrySignIn(textLogin.text, textPassword.text, context);
+                  log("clickedButton"); // qweQWEQWE
                 }, "Войти", Mycolors().background, Mycolors().accent)),
             SizedBox(
               height: 150,

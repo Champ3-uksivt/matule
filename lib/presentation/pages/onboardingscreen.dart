@@ -1,10 +1,10 @@
-import 'package:flutter_application_1/MyColors.dart';
 import 'package:flutter_application_1/presentation/pages/first_screen_page.dart';
 import 'package:flutter_application_1/presentation/pages/second_screen_page.dart';
 import 'package:flutter_application_1/presentation/pages/third_screen_page.dart';
 import 'package:flutter_application_1/presentation/widgets/button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/MyColors.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({
@@ -52,6 +52,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               count: 3,
               onDotClicked: (dot) {
                 nowPage = dot;
+
                 setState(() {
                   pageController.jumpToPage(nowPage);
                 });
