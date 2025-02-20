@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
+import 'package:flutter_application_1/presentation/pages/SearchPage.dart';
 import 'package:flutter_application_1/presentation/widgets/search_box.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
 import 'package:flutter_svg/svg.dart';
@@ -46,10 +48,18 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(
-                    width: MediaQuery.of(context).size.width - 150,
-                    height: 60,
-                    child: SearchBox()),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        CupertinoPageRoute(
+                            builder: (context) => const SearchPage()));
+                  },
+                  child: SizedBox(
+                      width: MediaQuery.of(context).size.width - 150,
+                      height: 60,
+                      child: SearchBox()),
+                ),
                 Container(
                   height: 70,
                   width: 70,

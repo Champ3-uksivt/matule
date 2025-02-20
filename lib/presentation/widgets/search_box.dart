@@ -24,6 +24,7 @@ class SearchBox extends StatelessWidget {
           hintText: "Поиск",
         ),
         readOnly: true,
+        enabled: false,
         cursorWidth: 0,
       ),
     );

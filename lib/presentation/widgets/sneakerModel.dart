@@ -15,7 +15,7 @@ class SneakerModel extends StatelessWidget {
         Container(
           alignment: Alignment.centerLeft,
           child: SvgPicture.asset(
-            "assets/images/Favorite.svg",
+            "assets/images/FavoriteRed.svg",
             height: 30,
             width: 30,
           ),

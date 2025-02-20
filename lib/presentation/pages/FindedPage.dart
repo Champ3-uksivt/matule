@@ -1,66 +1,37 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
-import 'package:flutter_application_1/presentation/pages/CartPage.dart';
-import 'package:flutter_application_1/presentation/pages/home.dart';
+import 'package:flutter_application_1/presentation/widgets/ExpandexSearchBox.dart';
 import 'package:flutter_application_1/presentation/widgets/sneakerModel.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
 import 'package:flutter_svg/svg.dart';
 
-class FavoriteScreen extends StatelessWidget {
-  const FavoriteScreen({super.key});
+class FindedPage extends StatelessWidget {
+  const FindedPage({super.key, required this.text});
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(
-          height: 100,
-          backgroundColor: Mycolors().block,
-          destinations: [
-            GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (context) => const HomePage()));
-                },
-                child: SvgPicture.asset("assets/images/home-2.svg")),
-            SvgPicture.asset(
-              "assets/images/Heart.svg",
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12.0),
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                          builder: (context) => const CartPage()));
-                },
-                child: SvgPicture.asset(
-                  "assets/images/shopBottom.svg",
-                ),
-              ),
-            ),
-            SvgPicture.asset("assets/images/notification.svg"),
-            SvgPicture.asset("assets/images/person.svg")
-          ]),
-      backgroundColor: Mycolors().background,
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 60.0, left: 15, right: 15),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 SvgPicture.asset("assets/images/Back.svg"),
-                Text(
-                  "Избранное",
-                  style: myTextStyle(TextDecoration.none, Mycolors().text, 20),
+                SizedBox(
+                  width: 105,
                 ),
-                SvgPicture.asset("assets/images/FavoriteRed.svg")
+                Text(
+                  "Поиск",
+                  style: myTextStyle(TextDecoration.none, Mycolors().text, 25),
+                ),
               ],
             ),
+          ),
+          SizedBox(
+            child: SearchBoxExpanded(
+                textEditingController: TextEditingController(text: text)),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
