@@ -1,8 +1,11 @@
 import 'dart:developer';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
 import 'package:flutter_application_1/domain/func.dart';
+import 'package:flutter_application_1/presentation/pages/RegisterPage.dart';
+import 'package:flutter_application_1/presentation/pages/reset_password_page.dart';
 import 'package:flutter_application_1/presentation/widgets/button.dart';
 import 'package:flutter_application_1/presentation/widgets/textbox.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
@@ -94,6 +97,10 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 onTap: () {
                   log("Reset clicked");
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const ResetPasswordPage()));
                 },
               ),
             ),
@@ -124,6 +131,12 @@ class _SignInPageState extends State<SignInPage> {
                         myTextStyle(TextDecoration.none, Mycolors().hint, 16),
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => const RegisterPage()));
+                    },
                     child: Text(
                       "Создать пользователя",
                       style:
