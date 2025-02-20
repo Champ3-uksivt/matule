@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
+import 'package:flutter_application_1/presentation/pages/ConfirmOrderPage.dart';
 import 'package:flutter_application_1/presentation/widgets/CartItem.dart';
 import 'package:flutter_application_1/presentation/widgets/button.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
@@ -116,8 +118,12 @@ class CartPage extends StatelessWidget {
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width - 60,
-                    child: button(() {}, "Оформить заказ", Mycolors().block,
-                        Mycolors().accent),
+                    child: button(() {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => const ConfirmOrderPage()));
+                    }, "Оформить заказ", Mycolors().block, Mycolors().accent),
                   )
                 ],
               ),

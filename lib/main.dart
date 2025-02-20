@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: "Matule", theme: ThemeData(), routes: {
-      "/": (context) => const SignInPage(),
+      "/": (context) => const OnBoardingScreen(),
       "/signIn": (context) => const SignInPage(),
       "/mainPage": (context) => const HomePage(),
     });
