@@ -12,6 +12,10 @@ import 'package:flutter_svg/svg.dart';
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({super.key});
 
+  //////
+  ///Создал: Усман Хуснияров
+  ///Объект: Страница
+  ///Описание: Страница, на которой пользователь указывает электроную почту своего аккаунта, и получает код для восстановления пароля.
   @override
   Widget build(BuildContext context) {
     return Scaffold(

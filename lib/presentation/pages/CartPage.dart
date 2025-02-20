@@ -9,6 +9,10 @@ import 'package:flutter_svg/svg.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
+  //////
+  ///Создал: Усман Хуснияров
+  ///Объект: Страница
+  ///Описание: Страница, на которой пользователь просматривает заказанные им товары
 
   @override
   Widget build(BuildContext context) {

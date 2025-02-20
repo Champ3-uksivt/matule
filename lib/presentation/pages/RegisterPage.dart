@@ -19,6 +19,10 @@ bool isRevealed = false;
 bool isChecked = false;
 
 class _RegisterPageState extends State<RegisterPage> {
+  //////
+  ///Создал: Усман Хуснияров
+  ///Объект: Страница
+  ///Описание: Страница, на которой новый пользователь может зарегистрировать свой аккаунт.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
