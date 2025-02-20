@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
+import 'package:flutter_application_1/presentation/pages/CartPage.dart';
+import 'package:flutter_application_1/presentation/pages/home.dart';
 import 'package:flutter_application_1/presentation/widgets/sneakerModel.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
 import 'package:flutter_svg/svg.dart';
@@ -14,14 +17,29 @@ class FavoriteScreen extends StatelessWidget {
           height: 100,
           backgroundColor: Mycolors().block,
           destinations: [
-            SvgPicture.asset("assets/images/home-2.svg"),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const HomePage()));
+                },
+                child: SvgPicture.asset("assets/images/home-2.svg")),
             SvgPicture.asset(
               "assets/images/Heart.svg",
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 12.0),
-              child: SvgPicture.asset(
-                "assets/images/shopBottom.svg",
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const CartPage()));
+                },
+                child: SvgPicture.asset(
+                  "assets/images/shopBottom.svg",
+                ),
               ),
             ),
             SvgPicture.asset("assets/images/notification.svg"),
@@ -47,7 +65,7 @@ class FavoriteScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 10.0),
             child: SizedBox(
-              height: MediaQuery.of(context).size.height - 250,
+              height: MediaQuery.of(context).size.height - 280,
               child: GridView.builder(
                 scrollDirection: Axis.vertical,
                 shrinkWrap: true,

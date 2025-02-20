@@ -9,6 +9,10 @@ class DetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //////
+    ///Создал: Усман Хуснияров
+    ///Объект: страница
+    ///Описание: Страница для деталей о товаре, открывается при нажатии на товар
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15, 70, 15, 0),
@@ -73,6 +77,9 @@ class DetailsPage extends StatelessWidget {
                 "Подробнее",
                 style: myTextStyle(TextDecoration.none, Mycolors().accent, 15),
               ),
+            ),
+            SizedBox(
+              height: 35,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
