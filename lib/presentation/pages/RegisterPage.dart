@@ -1,5 +1,9 @@
+import 'dart:developer';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
+import 'package:flutter_application_1/presentation/pages/AgreementPage.dart';
 import 'package:flutter_application_1/presentation/widgets/button.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
 import 'package:flutter_svg/svg.dart';
@@ -12,6 +16,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 bool isRevealed = false;
+bool isChecked = false;
 
 class _RegisterPageState extends State<RegisterPage> {
   @override
@@ -160,12 +165,31 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 GestureDetector(
                   onTap: () {},
-                  child: Text(
-                    "Даю согласие на обработку\nперсональных данных",
-                    style: myTextStyle(
-                        TextDecoration.underline, Mycolors().hint, 16),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          CupertinoPageRoute(
+                              builder: (context) => const AgreementPage()));
+                    },
+                    child: Text(
+                      "Даю согласие на обработку\nперсональных данных",
+                      style: myTextStyle(
+                          TextDecoration.underline, Mycolors().hint, 16),
+                    ),
                   ),
                 ),
+                Checkbox(
+                    value: isChecked ? true : false,
+                    onChanged: (qwe) {
+                      if (qwe == true) {
+                        isChecked = true;
+                        setState(() {});
+                      } else {
+                        isChecked = false;
+                        setState(() {});
+                      }
+                    })
               ],
             ),
           ),
@@ -174,7 +198,13 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           Container(
               width: MediaQuery.of(context).size.width - 60,
-              child: button(() {}, "Зарегистрироваться", Mycolors().background,
+              child: button(() {
+                if (isChecked == true) {
+                  Navigator.pushNamed(context, "/mainPage");
+                } else {
+                  log("qweqwe");
+                }
+              }, "Зарегистрироваться", Mycolors().background,
                   Mycolors().accent)),
           SizedBox(
             height: 130,
