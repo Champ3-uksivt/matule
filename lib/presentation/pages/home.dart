@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
 import 'package:flutter_application_1/presentation/pages/CartPage.dart';
+import 'package:flutter_application_1/presentation/pages/MyOrders.dart';
+import 'package:flutter_application_1/presentation/pages/Notifications.dart';
 import 'package:flutter_application_1/presentation/pages/ProfilePage.dart';
 import 'package:flutter_application_1/presentation/pages/SearchPage.dart';
 import 'package:flutter_application_1/presentation/widgets/search_box.dart';
@@ -10,7 +12,6 @@ import 'package:flutter_svg/svg.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -19,6 +20,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [TextButton(onPressed: () {}, child: Text("data"))],
+        ),
+      ),
       bottomNavigationBar: NavigationBar(
           height: 100,
           backgroundColor: Mycolors().block,
@@ -48,7 +54,14 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SvgPicture.asset("assets/images/notification.svg"),
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const Notifications()));
+                },
+                child: SvgPicture.asset("assets/images/notification.svg")),
             GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -66,10 +79,15 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SvgPicture.asset(
-                  "assets/images/Hamburger.svg",
-                  height: 40,
-                  width: 40,
+                GestureDetector(
+                  onTap: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  child: SvgPicture.asset(
+                    "assets/images/Hamburger.svg",
+                    height: 40,
+                    width: 40,
+                  ),
                 ),
                 Text(
                   "Главная",
@@ -137,7 +155,15 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ))
               ],
-            )
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const MyOrdersPage()));
+                },
+                child: Text("Мои заказы"))
           ],
         ),
       ),

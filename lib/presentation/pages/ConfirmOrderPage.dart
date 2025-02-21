@@ -32,185 +32,7 @@ class ConfirmOrderPage extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Mycolors().block,
                 borderRadius: BorderRadius.circular(20)),
-            child: Column(
-              children: [
-                Text(
-                  "Контактная информация",
-                  style: myTextStyle(TextDecoration.none, Mycolors().text, 20),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    SvgPicture.asset("assets/images/Email.svg"),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "emmanuel@gmail.com",
-                          style: myTextStyle(
-                              TextDecoration.none, Mycolors().text, 16),
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            textAlign: TextAlign.start,
-                            "Email",
-                            style: myTextStyle(
-                                TextDecoration.none, Mycolors().hint, 16),
-                          ),
-                        )
-                      ],
-                    ),
-                    SizedBox(
-                      width: 60,
-                    ),
-                    SvgPicture.asset(
-                      "assets/images/Edit.svg",
-                      width: 35,
-                      height: 35,
-                    ),
-                  ],
-                ),
-                Row(children: [
-                  SvgPicture.asset("assets/images/Phone.svg"),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "+234-811-732-5298",
-                        style: myTextStyle(
-                            TextDecoration.none, Mycolors().text, 16),
-                      ),
-                      Container(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          textAlign: TextAlign.start,
-                          "Телефон",
-                          style: myTextStyle(
-                              TextDecoration.none, Mycolors().hint, 16),
-                        ),
-                      )
-                    ],
-                  ),
-                  SizedBox(
-                    width: 85,
-                  ),
-                  SvgPicture.asset(
-                    "assets/images/Edit.svg",
-                    width: 35,
-                    height: 35,
-                  ),
-                ]),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  children: [
-                    Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Адрес",
-                            style: myTextStyle(
-                                TextDecoration.none, Mycolors().text, 16),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              textAlign: TextAlign.start,
-                              "1082 Аэропорт, Нигерии",
-                              style: myTextStyle(
-                                  TextDecoration.none, Mycolors().hint, 16),
-                            ),
-                          )
-                        ]),
-                    SizedBox(
-                      width: 100,
-                    ),
-                    SvgPicture.asset(
-                      "assets/images/Edit.svg",
-                      width: 35,
-                      height: 35,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 20.0),
-                    child: Image.asset("assets/images/Map.png"),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Способ оплаты",
-                    style:
-                        myTextStyle(TextDecoration.none, Mycolors().text, 20),
-                  ),
-                ),
-                Row(
-                  children: [
-                    Image.asset(
-                      "assets/images/Group 82.jpg",
-                      fit: BoxFit.cover,
-                      height: 50,
-                      width: 50,
-                    ),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "DbL Card",
-                          textAlign: TextAlign.left,
-                          style: myTextStyle(
-                              TextDecoration.none, Mycolors().text, 16),
-                        ),
-                        Container(
-                          alignment: Alignment.bottomLeft,
-                          child: Text(
-                            textAlign: TextAlign.center,
-                            "**** **** 0696 4629",
-                            style: myTextStyle(
-                                TextDecoration.none, Mycolors().hint, 16),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      width: 90,
-                    ),
-                    SvgPicture.asset(
-                      "assets/images/Arrow.svg",
-                      height: 30,
-                      width: 30,
-                    )
-                  ],
-                ),
-              ],
-            ),
+            child: ContactInformation(),
           ),
           SizedBox(
             height: 40,
@@ -292,6 +114,190 @@ class ConfirmOrderPage extends StatelessWidget {
               ))
         ],
       ),
+    );
+  }
+}
+
+class ContactInformation extends StatelessWidget {
+  const ContactInformation({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          "Контактная информация",
+          style: myTextStyle(TextDecoration.none, Mycolors().text, 20),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            SvgPicture.asset("assets/images/Email.svg"),
+            SizedBox(
+              width: 20,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "emmanuel@gmail.com",
+                  style: myTextStyle(TextDecoration.none, Mycolors().text, 16),
+                ),
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    textAlign: TextAlign.start,
+                    "Email",
+                    style:
+                        myTextStyle(TextDecoration.none, Mycolors().hint, 16),
+                  ),
+                )
+              ],
+            ),
+            SizedBox(
+              width: 60,
+            ),
+            SvgPicture.asset(
+              "assets/images/Edit.svg",
+              width: 35,
+              height: 35,
+            ),
+          ],
+        ),
+        Row(children: [
+          SvgPicture.asset("assets/images/Phone.svg"),
+          SizedBox(
+            width: 20,
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "+234-811-732-5298",
+                style: myTextStyle(TextDecoration.none, Mycolors().text, 16),
+              ),
+              Container(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  textAlign: TextAlign.start,
+                  "Телефон",
+                  style: myTextStyle(TextDecoration.none, Mycolors().hint, 16),
+                ),
+              )
+            ],
+          ),
+          SizedBox(
+            width: 85,
+          ),
+          SvgPicture.asset(
+            "assets/images/Edit.svg",
+            width: 35,
+            height: 35,
+          ),
+        ]),
+        SizedBox(
+          height: 10,
+        ),
+        Row(
+          children: [
+            Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Адрес",
+                    style:
+                        myTextStyle(TextDecoration.none, Mycolors().text, 16),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      textAlign: TextAlign.start,
+                      "1082 Аэропорт, Нигерии",
+                      style:
+                          myTextStyle(TextDecoration.none, Mycolors().hint, 16),
+                    ),
+                  )
+                ]),
+            SizedBox(
+              width: 100,
+            ),
+            SvgPicture.asset(
+              "assets/images/Edit.svg",
+              width: 35,
+              height: 35,
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        SizedBox(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 20.0),
+            child: Image.asset("assets/images/Map.png"),
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "Способ оплаты",
+            style: myTextStyle(TextDecoration.none, Mycolors().text, 20),
+          ),
+        ),
+        Row(
+          children: [
+            Image.asset(
+              "assets/images/Group 82.jpg",
+              fit: BoxFit.cover,
+              height: 50,
+              width: 50,
+            ),
+            SizedBox(
+              width: 15,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "DbL Card",
+                  textAlign: TextAlign.left,
+                  style: myTextStyle(TextDecoration.none, Mycolors().text, 16),
+                ),
+                Container(
+                  alignment: Alignment.bottomLeft,
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    "**** **** 0696 4629",
+                    style:
+                        myTextStyle(TextDecoration.none, Mycolors().hint, 16),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              width: 90,
+            ),
+            SvgPicture.asset(
+              "assets/images/Arrow.svg",
+              height: 30,
+              width: 30,
+            )
+          ],
+        ),
+      ],
     );
   }
 }
