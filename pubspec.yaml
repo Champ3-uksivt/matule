@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 flutter_native_splash:
-  title: Matule
+  title: KMatule
   ios: "assets/images/Matule_icon.png"
   
 
@@ -58,7 +58,6 @@ dependencies:
   shared_preferences: ^2.5.2
   dropdown_button2: ^2.3.9
   image_picker: ^1.1.2
-  flutter_bcrypt: ^1.0.8
   cached_network_image: ^3.4.1
   url_launcher: ^6.3.1
   flutter_zoom_drawer: ^3.2.0
