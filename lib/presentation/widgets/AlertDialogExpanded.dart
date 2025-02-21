@@ -7,11 +7,16 @@ class AlertDialogExpanded extends StatefulWidget {
   const AlertDialogExpanded({
     super.key,
   });
+
   @override
   State<AlertDialogExpanded> createState() => _AlertDialogExpandedState();
 }
 
 class _AlertDialogExpandedState extends State<AlertDialogExpanded> {
+  //////
+  ///Создал: Усман Хуснияров
+  ///Объект: виджет
+  ///Описание: Диалоговое окно оповещающее об успешной отправки сообщения на почту
   @override
   Widget build(BuildContext context) {
     return Container(

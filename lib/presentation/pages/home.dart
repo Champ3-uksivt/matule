@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MyColors.dart';
 import 'package:flutter_application_1/presentation/pages/CartPage.dart';
+import 'package:flutter_application_1/presentation/pages/ProfilePage.dart';
 import 'package:flutter_application_1/presentation/pages/SearchPage.dart';
 import 'package:flutter_application_1/presentation/widgets/search_box.dart';
 import 'package:flutter_application_1/presentation/widgets/textstyle.dart';
@@ -48,7 +49,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SvgPicture.asset("assets/images/notification.svg"),
-            SvgPicture.asset("assets/images/person.svg")
+            GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                          builder: (context) => const ProfilePage()));
+                },
+                child: SvgPicture.asset("assets/images/person.svg"))
           ]),
       backgroundColor: Mycolors().background,
       body: Padding(

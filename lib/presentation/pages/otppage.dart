@@ -5,7 +5,10 @@ import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage({super.key});
-
+  //////
+  ///Создал: Усман Хуснияров
+  ///Объект: Страница
+  ///Описание: Страница, на которой пользователь должен ввести код, присланный на указанную электроную почту.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
